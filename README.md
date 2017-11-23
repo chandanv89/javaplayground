@@ -1,2 +1,2 @@
-# Java Playground [![Build Status](https://travis-ci.org/chandanv89/javaplayground.svg)](https://travis-ci.org/chandanv89/javaplayground/builds)
+# Java Playground [![Build Status](https://travis-ci.org/chandanv89/javaplayground.svg?branch=develop)](https://travis-ci.org/chandanv89/javaplayground)
 Java learning need not be boring!
