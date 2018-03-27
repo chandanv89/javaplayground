@@ -18,6 +18,7 @@
 
    <modules>
       <module>Sieve of Eratosthenes</module>
+      <module>code-golf</module>
    </modules>
 
    <scm>
