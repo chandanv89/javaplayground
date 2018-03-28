@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <packaging>pom</packaging>
-   <name>Puzzles</name>
+   <packaging>jar</packaging>
+   <name>Sieve of Eratosthenes</name>
    <url>https://chandanv89.github.io/puzzles/</url>
 
    <properties>
@@ -12,40 +12,29 @@
       <buildNumber>${maven.build.timestamp}</buildNumber>
    </properties>
 
-   <groupId>com.github.chandanv89</groupId>
-   <artifactId>puzzles</artifactId>
+   <groupId>com.github.chandanv89.puzzles</groupId>
+   <artifactId>sieve-of-eratosthenes</artifactId>
    <version>${buildNumber}</version>
 
-   <modules>
-      <module>Sieve of Eratosthenes</module>
-      <module>code-golf</module>
-   </modules>
-
-   <scm>
-      <connection>scm:git:git@github.com:chandanv89/puzzles.git</connection>
-      <developerConnection>scm:git:git@github.com:chandanv89/puzzles.git</developerConnection>
-      <url>https://github.com/chandanv89/puzzles</url>
-   </scm>
+   <dependencies>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.12</version>
+         <scope>test</scope>
+      </dependency>
+   </dependencies>
 
    <build>
       <plugins>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.7.0</version>
             <configuration>
-               <source>1.8</source>
-               <target>1.8</target>
+               <source>8</source>
+               <target>8</target>
             </configuration>
          </plugin>
       </plugins>
    </build>
-
-   <licenses>
-      <license>
-         <name>GPL-3.0-or-later</name>
-         <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
-         <distribution>repo</distribution>
-      </license>
-   </licenses>
 </project>
