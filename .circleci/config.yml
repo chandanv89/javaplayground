@@ -32,7 +32,7 @@ jobs:
           - v1-dependencies-
 
       #- run: mvn dependency:go-offline
-      - run: mvn sonar:sonar -Dsonar.organization=chandanv89-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6b5a0375472cbb4e6d68ac8f877ffd4336375d4f
+      - run: mvn clean deploy sonar:sonar -Dsonar.organization=chandanv89-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6b5a0375472cbb4e6d68ac8f877ffd4336375d4f -Dsonar.java.binaries
 
       - save_cache:
           paths:
