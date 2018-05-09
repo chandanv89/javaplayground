@@ -1,7 +1,5 @@
 package com.github.chandanv89.puzzles.codegolf;
 
-import java.util.stream.Stream;
-
 /**
  * The interface N.
  */

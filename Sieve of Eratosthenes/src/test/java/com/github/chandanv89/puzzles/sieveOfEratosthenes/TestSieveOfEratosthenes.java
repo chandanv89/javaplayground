@@ -4,9 +4,6 @@ import com.github.chandanv89.puzzles.sieveOfEratosthenes.algorithm.PrimeGen;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 /**
  * puzzles - com.github.chandanv89.puzzles.sieveOfEratosthenes.TestSieveOfEratosthenes
  * Copyright (C) 2018 chandanv89
