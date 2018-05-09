@@ -31,26 +31,23 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      # run tests!
+      - run:
+          name: Integration tests
+          command: mvn clean integration-test
+
       #- run: mvn dependency:go-offline
-      - run: mvn clean test sonar:sonar -Dsonar.organization=chandanv89-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6b5a0375472cbb4e6d68ac8f877ffd4336375d4f
+      - run:
+          name:
+          command: mvn clean test sonar:sonar -Dsonar.organization=chandanv89-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6b5a0375472cbb4e6d68ac8f877ffd4336375d4f
 
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-        
-      # run tests!
-      - run: mvn integration-test
 
       - run:
           name: Setup Code Climate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
-      - run:
-          name: Run tests
-          command: |
-            sudo docker-php-ext-enable xdebug
-            ./cc-test-reporter before-build
-            sudo vendor/bin/phpunit --coverage-clover clover.xml
-            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
